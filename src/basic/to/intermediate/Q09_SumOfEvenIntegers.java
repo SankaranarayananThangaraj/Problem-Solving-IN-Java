@@ -1,5 +1,5 @@
 package basic.to.intermediate;
-
+import java.util.*;
 public class Q09_SumOfEvenIntegers {
 	
 	/**
@@ -16,34 +16,27 @@ public class Q09_SumOfEvenIntegers {
 	Sum of even numbers from 2 to 30 = 240
 	(Even numbers: 2 + 4 + 6 + ... + 30 = 240)
 	 */
-	public static void main(String[] args) {
-		
-		// Step 1: Variable Declaration
-		/**
-		 * Declare variables:
-		 * sum to store the result
-		 * i for loop iteration
-		 */
-		int sum = 0;
+	 public static void main(String[] args) {
+        
+		//Declare the variable
+		Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int num = input.nextInt();
 
-		// Step 2: Loop and Calculation
-		/**
-		 * Loop from 2 to 30 (inclusive)
-		 * Check if number is even
-		 * Add to sum
-		 */
-		for (int i = 2; i <= 30; i++) {
-			if (i % 2 == 0) {
-				sum += i;
-			}
-		}
+        int sum = 0;
 
-		// Step 3: Output
-		/**
-		 * Print the final sum
-		 */
-		System.out.println("Sum of even numbers from 2 to 30 = " + sum);
+        // Loop from 2 to 30
+        for (int i = 2; i <= 30; i++) {
+            if (i % 2 == 0) { // Check if number is even
+                sum += i;     // Add even number to sum
+            }
+        }
+
+        // Print the final result
+        System.out.println("Sum of even numbers from 2 to " + num + " = " + sum);
+    
+    }
 	}
 
 
-}
+
